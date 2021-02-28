@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/permissionIconImageView"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_margin="@dimen/_6sdp"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:src="@drawable/permission_ic_camera"
+            app:tint="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/permissionNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="Camera Permission"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_20sdp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/explainWhyThisRequireTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="Kindly allow Camera Permission from Settings, without this permission the app is unable to provide photo capture feature.\n\nPlease turn on permissions at [Setting] -> [Permissions]"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/closeButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/permission_alert_dialog_button_background"
+            android:fontFamily="serif"
+            android:inputType="text"
+            android:shadowColor="@android:color/transparent"
+            android:text="Close"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_18sdp" />
+
+        <Button
+            android:id="@+id/settingButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:layout_weight="1"
+            android:background="@drawable/permission_alert_dialog_button_background"
+            android:fontFamily="serif"
+            android:inputType="text"
+            android:shadowColor="@android:color/transparent"
+            android:text="Settings"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_18sdp" />
+    </LinearLayout>
+</LinearLayout>

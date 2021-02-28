@@ -1,0 +1,21 @@
+ext {
+    projectConfiguration = [
+            compileSdk   : 29,
+            minSdk       : 16,
+            targetSdk    : 29,
+            versionCode  : 1,
+            versionName  : "1.0"
+    ]
+
+    developmentServer = [
+            devHostUrl     : "\"https://www.development.yourbackend.com\"",
+            devBaseUrl     : "\"https://www.development.yourbackend.com/api/\"",
+            devApiAccessKey: "\"AIzaSyOzB818x55FASHvX4JuGQciR9lv7q\"",
+    ]
+
+    productionServer = [
+            prodHostUrl     : "\"https://www.yourbackend.com\"",
+            prodBaseUrl     : "\"https://www.yourbackend.com/api/\"",
+            prodApiAccessKey: "\"AIzaSyOzB818x55FASHvX4JuGQciR9lv7q\"",
+    ]
+}

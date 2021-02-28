@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.runtime.permission">
+
+    <!-- ======================================================================================= -->
+    <!-- ==================== IMPORTANT: These permissions are required. ======================= -->
+    <!-- ======================================================================================= -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!--
+    PERMISSION_GROUP CALENDAR
+   -->
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+
+    <!--
+    PERMISSION_GROUP CAMERA
+   -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera.front.autofocus"
+        android:required="false" />
+
+    <!--
+     PERMISSION_GROUP CONTACTS
+    -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+    <!--
+    PERMISSION_GROUP LOCATION
+   -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <!--
+   PERMISSION_GROUP MICROPHONE
+  -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!--
+   PERMISSION_GROUP PHONE
+  -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.ADD_VOICEMAIL"/>
+    <uses-permission android:name="android.permission.USE_SIP"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+
+    <!--
+     PERMISSION_GROUP SENSORS
+    -->
+    <uses-permission android:name="android.permission.BODY_SENSORS"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+
+    <!--
+    PERMISSION_GROUP SMS
+   -->
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH"/>
+    <uses-permission android:name="android.permission.RECEIVE_MMS"/>
+
+    <!--
+     PERMISSION_GROUP STORAGE
+    -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--
+         OTHER_PERMISSION
+    -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:defaultToDeviceProtectedStorage="true"
+        android:directBootAware="true"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:requiredForAllUsers="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppBaseTheme"
+        android:usesCleartextTraffic="true">
+    <!-- ===============================================================================+======= -->
+    <!-- =========== Prevents restarts activity when the below configuration changes. ========== -->
+      <!-- android:configChanges="layoutDirection|uiMode|locale|orientation|screenSize........"-->
+    <!-- ======================================================================================= -->
+     <activity
+         android:name=".RuntimePermissionActivity"
+         android:configChanges="layoutDirection|locale|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+         android:label="@string/app_name"
+         android:screenOrientation="portrait">
+         <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+
+             <category android:name="android.intent.category.LAUNCHER" />
+          </intent-filter>
+     </activity>
+
+    <activity
+       android:name=".PermissionGrantedActivity"
+       android:configChanges="layoutDirection|locale|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+       android:label="@string/app_name"
+       android:screenOrientation="portrait" />
+    </application>
+</manifest>
