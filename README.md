@@ -7,11 +7,11 @@ Let RuntimePermission support
 - With Custom UI
 - With Permission Callback
 
-| First      | Second   | Third   |
+| First      | Second   | When click on Deny   |
 |------------------|-----------------|-----------------|
 | <img src="art/1.png" width="250"> | <img src="art/2.png" width="250"> | <img src="art/3.png" width="250"> |
 
-| Fourth      | Five   |
+| Fourth      | When click on Deny & don't ask again  |
 |------------------|-----------------|
 | <img src="art/4.png" width="250"> | <img src="art/5.png" width="250"> |
 
